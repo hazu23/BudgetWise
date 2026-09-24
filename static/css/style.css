@@ -1,0 +1,394 @@
+/* style.css */
+
+:root {
+    --paper: #F5F1E6;
+    --paper-alt: #EFE8D5;
+    --ink: #1F2E28;
+    --forest: #24503F;
+    --forest-dark: #17332A;
+    --gold: #C89B3C;
+    --gold-dark: #A87F2C;
+    --coral: #D9634A;
+    --line: #DCD3BB;
+}
+
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+h1, h2, h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    color: var(--ink);
+    margin: 0;
+}
+
+.bw-mono { font-family: 'IBM Plex Mono', monospace; }
+
+/* Buttons — extend Bootstrap's .btn, don't replace it */
+.btn-forest {
+    background: var(--forest);
+    border-color: var(--forest);
+    color: var(--paper);
+    font-weight: 600;
+}
+.btn-forest:hover, .btn-forest:focus {
+    background: var(--forest-dark);
+    border-color: var(--forest-dark);
+    color: var(--paper);
+}
+
+.btn-outline-forest {
+    background: transparent;
+    border-color: var(--line);
+    color: var(--ink);
+    font-weight: 600;
+}
+.btn-outline-forest:hover, .btn-outline-forest:focus {
+    border-color: var(--forest);
+    color: var(--forest);
+    background: transparent;
+}
+
+.btn-gold {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--forest-dark);
+    font-weight: 600;
+}
+.btn-gold:hover, .btn-gold:focus {
+    background: var(--gold-dark);
+    border-color: var(--gold-dark);
+    color: var(--paper);
+}
+
+.bw-link-underline {
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.bw-link-underline:hover { color: var(--forest); border-color: var(--forest); }
+
+/* Nav */
+.bw-nav {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.bw-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--ink);
+}
+
+.bw-mark { display: inline-flex; }
+
+.navbar-toggler {
+    border-color: var(--line);
+    padding: 6px 10px;
+}
+.navbar-toggler:focus { box-shadow: 0 0 0 3px rgba(36, 80, 63, 0.25); }
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(31, 46, 40)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Hero */
+.bw-hero { padding: 72px 0 88px; }
+
+.bw-hero h1 {
+    font-size: 3.1rem;
+    line-height: 1.1;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+.bw-hero-lead {
+    margin-top: 22px;
+    font-size: 1.15rem;
+    max-width: 46ch;
+    color: #45564E;
+}
+
+/* Ledger card visual */
+.bw-ledger-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 26px;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 10px 14px 0 var(--forest);
+    transform: rotate(-1.5deg);
+}
+
+.bw-ledger-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.9rem;
+    color: #6B7A72;
+}
+
+.bw-ledger-total {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.bw-ledger-total small { font-family: 'Inter', sans-serif; font-weight: 400; color: #6B7A72; font-size: 0.75rem; }
+
+.bw-ledger-list { list-style: none; margin: 0; padding: 0; }
+.bw-ledger-list li { margin-bottom: 16px; }
+.bw-ledger-list li:last-child { margin-bottom: 0; }
+
+.bw-ledger-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.92rem;
+    margin-bottom: 6px;
+}
+
+.bw-bar {
+    height: 6px;
+    background: var(--paper-alt);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.bw-bar span { display: block; height: 100%; background: var(--forest); border-radius: 3px; }
+.bw-bar-warn span { background: var(--coral); }
+
+/* Features */
+.bw-features { padding: 20px 0 84px; }
+
+.bw-features-row { border-top: 1px solid var(--line); padding-top: 28px; }
+
+.bw-feature { padding-left: 24px; }
+
+.bw-icon { margin-bottom: 14px; }
+
+.bw-feature h3 {
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.bw-feature p {
+    font-size: 0.93rem;
+    color: #52625A;
+    margin: 0;
+}
+
+/* divider lines between feature columns on larger screens only */
+@media (min-width: 992px) {
+    .bw-feature { border-left: 1px solid var(--line); }
+    .bw-feature:nth-child(4n+1) { border-left: none; padding-left: 0; }
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .bw-feature { border-left: 1px solid var(--line); }
+    .bw-feature:nth-child(odd) { border-left: none; padding-left: 0; }
+}
+@media (max-width: 575.98px) {
+    .bw-feature { padding-left: 0; }
+}
+
+/* How it works */
+.bw-how {
+    background: var(--paper-alt);
+    padding: 80px 0;
+}
+
+.bw-how h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.bw-step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--forest);
+    color: var(--paper);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.bw-step h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.bw-step p {
+    font-size: 0.93rem;
+    color: #52625A;
+    margin: 0;
+}
+
+/* CTA band */
+.bw-cta { background: var(--forest); padding: 64px 0; }
+
+.bw-cta h2 {
+    color: var(--paper);
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+
+/* Footer */
+.bw-footer {
+    background: var(--forest-dark);
+    color: #C9D3CD;
+    padding: 56px 0 24px;
+}
+
+.bw-brand-light { color: var(--paper); }
+
+.bw-footer-tag {
+    margin-top: 14px;
+    font-size: 0.9rem;
+    max-width: 32ch;
+    color: #9FAFA7;
+}
+
+.bw-footer-grid { padding-bottom: 40px; }
+
+.bw-footer-grid h4 {
+    font-family: 'Inter', sans-serif;
+    color: var(--paper);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.bw-footer-grid ul { list-style: none; margin: 0; padding: 0; }
+.bw-footer-grid li { margin-bottom: 10px; }
+.bw-footer-grid a { color: #9FAFA7; font-size: 0.9rem; text-decoration: none; }
+.bw-footer-grid a:hover { color: var(--paper); }
+
+.bw-footer-bottom {
+    border-top: 1px solid #2E4A3F;
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #7E9088;
+}
+
+/* Auth pages (register / login) */
+.bw-nav-alt {
+    font-size: 0.92rem;
+    color: #52625A;
+}
+.bw-nav-alt a {
+    color: var(--forest);
+    font-weight: 600;
+    text-decoration: none;
+}
+.bw-nav-alt a:hover { text-decoration: underline; }
+
+.bw-auth {
+    padding: 64px 0 88px;
+    min-height: calc(100vh - 400px);
+}
+
+.bw-auth-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 8px 10px 0 var(--forest);
+}
+
+.bw-auth-card h1 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.bw-auth-lead {
+    color: #52625A;
+    margin-bottom: 28px;
+    font-size: 0.98rem;
+}
+
+.bw-auth .form-label {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--ink);
+}
+
+.bw-auth .form-control {
+    padding: 10px 14px;
+    border-color: var(--line);
+}
+
+.bw-auth .form-control:focus {
+    border-color: var(--forest);
+    box-shadow: 0 0 0 0.2rem rgba(36, 80, 63, 0.15);
+}
+
+.bw-forgot-link {
+    font-size: 0.85rem;
+    color: var(--forest);
+    text-decoration: none;
+    font-weight: 500;
+}
+.bw-forgot-link:hover { text-decoration: underline; }
+
+.bw-field-hint {
+    font-size: 0.82rem;
+    color: #7C8A82;
+    margin-top: 6px;
+}
+
+.bw-auth .form-check-input:checked {
+    background-color: var(--forest);
+    border-color: var(--forest);
+}
+.bw-auth .form-check-input:focus {
+    border-color: var(--forest);
+    box-shadow: 0 0 0 0.2rem rgba(36, 80, 63, 0.15);
+}
+.bw-auth .form-check-label {
+    font-size: 0.92rem;
+    color: #45564E;
+}
+
+.bw-auth-footer {
+    text-align: center;
+    margin: 24px 0 0;
+    font-size: 0.92rem;
+    color: #52625A;
+}
+.bw-auth-footer a {
+    color: var(--forest);
+    font-weight: 600;
+    text-decoration: none;
+}
+.bw-auth-footer a:hover { text-decoration: underline; }
+
+@media (max-width: 575.98px) {
+    .bw-auth-card { padding: 28px 22px; }
+}
+
+/* Responsive tweaks beyond what Bootstrap's grid already handles */
+@media (max-width: 767.98px) {
+    .bw-hero h1 { font-size: 2.2rem; }
+    .bw-cta .container { flex-direction: column; align-items: flex-start; }
+}
